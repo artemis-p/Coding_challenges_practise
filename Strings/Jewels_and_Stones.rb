@@ -1,0 +1,36 @@
+# You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
+
+# The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+# Example 1:
+
+# Input: J = "aA", S = "aAAbbbb"
+# Output: 3
+# Example 2:
+
+# Input: J = "z", S = "ZZ"
+# Output: 0
+# Note:
+
+# S and J will consist of letters and have length at most 50.
+# The characters in J are distinct.
+
+def num_jewels_in_stones(j, s)
+  jewells = []
+  j = j.chars
+  s = s.chars
+      j.each do |jewell|
+          s.each do |stone|
+              if jewell == stone 
+                  jewells << stone
+              end
+          end
+      end
+  jewells.count
+end
+
+# Split the characters of the string J
+# Split the characters of the string S
+# Iterate through the J and S arrays
+# for every character in array j check every character in array s
+# compare if they are the same
